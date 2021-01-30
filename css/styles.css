@@ -628,11 +628,12 @@ footer {
 
 	color: #ffffff;
 }
-.join-title {
-	/* display: block;
-	margin-top: 20px; */
-	/* text-align: center; */
-}
+
+/* .join-title {
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+} */
 
 .join-list {
 	display: flex;
@@ -699,9 +700,9 @@ footer {
 }
 
 .form-input {
-	max-width: 358px;
+	width: 358px;
 	background-color: #2f303a;
-	padding: 15px 295px 15px 16px;
+	padding: 15px 0px 15px 16px;
 
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	/* box-sizing: border-box;
@@ -924,12 +925,18 @@ footer {
 
 	justify-content: center;
 	align-items: center;
+	transition: var(--time-animation);
 }
 
 .icon-close {
 	width: 18px;
 	height: 18px;
 	/* padding-top: 3px; */
+}
+
+.modal-close:hover .icon-close,
+.modal-close:focus .icon-close {
+	fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -990,8 +997,12 @@ textarea {
 	min-height: 40px;
 	margin-top: 4px;
 	padding-left: 42px;
+	background-color: var(--primerry-bg-color);
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+	cursor: pointer;
+
+	transition: var(--time-animation);
 }
 
 .comment {
@@ -1040,9 +1051,68 @@ textarea {
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
+	transition: var(--time-animation);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .icon-form {
+	position: absolute;
+
+	left: 53px;
+	transform: translateY(189%);
+
 	width: 18px;
 	height: 18px;
+
+	transition: var(--time-animation);
+}
+
+.modal-input:hover ~ .icon-form,
+.modal-input:focus ~ .icon-form {
+	fill: var(--accent-color);
+}
+
+.modal-input:hover {
+	border: 1px solid var(--accent-color);
+}
+
+/* Checkbox */
+/* не работает visibility*/
+.checkbox {
+	visibility: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.checkbox-icon {
+	display: inline-block;
+	position: relative;
+	margin-right: 7px;
+
+	transform: translateY(10%);
+
+	width: 16px;
+	height: 15px;
+	background-image: url(../svg/checkbox.svg);
+}
+
+/* не работает Cheked */
+
+.checkbox:checked + .checkbox-icon {
+	background-image: url(../svg/checkmodal.svg);
+}
+
+/* для примера сделал ховер*/
+.checkbox-icon:hover {
+	background-image: url(../svg/checkmodal.svg);
 }

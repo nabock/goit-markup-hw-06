@@ -424,7 +424,7 @@
 					<p class="join-title-form">Подпишитесь на рассылку</p>
 					<form class="form js-speaker-form">
 						<div class="join-form-field">
-							<label for="E-mail" class="form-label"></label>
+							<!-- <label for="E-mail" class="form-label"></label> -->
 							<input class="form-input" type="email" name="mail" id="mail" placeholder="E-mail" />
 						</div>
 					</form>
@@ -432,8 +432,7 @@
 					<button type="submit" class="btn-submit">
 						Подписаться
 						<svg class="icon-subcribe">
-							<!-- не подгружает иконку icon-send ,временная instagram -->
-							<use class="icon-join" href="./image/sprite.svg#icon-instagram" width="24px" height="24px"></use>
+							<use class="icon-join" href="./image/sprite.svg#icon-send" width="24px" height="24px"></use>
 						</svg>
 					</button>
 				</div>
@@ -454,6 +453,9 @@
 						<div class="form-field">
 							<label for="name" class="form-label">Имя</label>
 							<input type="text" class="modal-input" name="name" id="name" />
+							<svg class="icon-form">
+								<use class="" href="./image/sprite.svg#icon-modalperson" width="18px" height="18px"></use>
+							</svg>
 						</div>
 
 						<div class="form-field">
@@ -466,7 +468,10 @@
 
 						<div class="form-field">
 							<label for="e-mail" class="form-label">Почта</label>
-							<input type="email" class="modal-input" name="mail" id="mail" />
+							<input type="email" class="modal-input" name="mail" id="mail-modal" />
+							<svg class="icon-form">
+								<use href="./image/sprite.svg#icon-modalmail" width="18px" height="18px"></use>
+							</svg>
 						</div>
 
 						<div class="form-field">
@@ -475,17 +480,22 @@
 						</div>
 					</form>
 
-					<div class="policy-field">
+					<div>
 						<input type="checkbox" name="policy" id="policy" />
-						<label for="policy" class="form-label">Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a> </label>
 
-						<button type="submit" class="modal-submit">Отправить</button>
+						<span class="checkbox-icon"></span>
+
+						<label for="policy" class="form-label">
+							Соглашаюсь с рассылкой и принимаю
+							<a class="policy-link" href="">Условия договора</a>
+						</label>
 					</div>
+
+					<button type="submit" class="modal-submit">Отправить</button>
 				</div>
 			</div>
 		</div>
 
-		<script src="./js/modal.js"></script>
 		<script>
 			;(() => {
 				document.querySelector(".js-speaker-form").addEventListener("submit", e => {
@@ -495,5 +505,7 @@
 				})
 			})()
 		</script>
+
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
