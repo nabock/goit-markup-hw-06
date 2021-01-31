@@ -1080,10 +1080,17 @@ textarea {
 	border: 1px solid var(--accent-color);
 }
 
+.comment {
+	transition: var(--time-animation);
+}
+
+.comment:hover {
+	border: 1px solid var(--accent-color);
+}
+
 /* Checkbox */
-/* не работает visibility*/
-.checkbox {
-	visibility: hidden;
+
+.checkbox-input {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -1106,13 +1113,6 @@ textarea {
 	background-image: url(../svg/checkbox.svg);
 }
 
-/* не работает Cheked */
-
-.checkbox:checked + .checkbox-icon {
-	background-image: url(../svg/checkmodal.svg);
-}
-
-/* для примера сделал ховер*/
-.checkbox-icon:hover {
+.checkbox-input:checked + .checkbox-icon {
 	background-image: url(../svg/checkmodal.svg);
 }
