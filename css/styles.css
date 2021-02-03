@@ -1150,6 +1150,8 @@ textarea {
 	width: 16px;
 	height: 15px;
 	/* background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; */
 	background-image: url(../svg/checkbox.svg);
 }
 
